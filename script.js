@@ -98,44 +98,49 @@ function showContent(type) {
                 <li id="movie_description">Lord of the Rings: Return of the King</li>
                 <li id="movie_description">Fight Club</li>
                 <li id="movie_description">Forrest Gump</li>
-                <li id="movie_description">Inception</li>
-            `;
-    } else if (type === "articles") {
+                <li id="movie_description">Inception</li>`;
+    } 
+
+    else if (type === "articles") {
         contentDiv.innerHTML = `<h3>Read Articles</h3>
-            <p>Coming soon! Stay tuned for interesting reads.</p>`;
-    } else if (type === "explore") {
-        contentDiv.innerHTML = `<h3>Explore World</h3>
-            <p>01. Bandarban</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sI4H8Fnn4dw?si=1S1tgsncE21HqR1H" allowfullscreen></iframe>
-            <p class='bangla'>পৃথিবী সংস্কৃতি, প্রকৃতি এবং ইতিহাসের অসংখ্য সুতোয় বোনা একটি গালিচা...</p>
+            <p>Coming soon! Stay tuned for interesting reads.</p>
+            <marquee behavior="scroll" direction="left" scrollamount="5"  style="margin-top: 297px;font-weight:bold; font-size:18px;color:rgb(255, 0, 0);">Website is updating... Please check back soon!</marquee>`;
+    }
 
-            <p>02. Cox's  Bazar</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YPxfs_hYOnw" allowfullscreen></iframe>
-            <p class='bangla'>নীল জলরাশি আর সোনালি বালির মায়ায় মোড়ানো কক্সবাজার যেন বাংলাদেশের এক স্বপ্নঘেরা সমুদ্রকাব্য।</p>
+     else if (type === "explore") {
+    contentDiv.innerHTML = `<h3>Explore World</h3>
 
+        <p><span class="place-name">01. Bandarban</span></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sI4H8Fnn4dw?si=1S1tgsncE21HqR1H" allowfullscreen></iframe>
+        <p class='bangla'>পৃথিবী সংস্কৃতি, প্রকৃতি এবং ইতিহাসের অসংখ্য সুতোয় বোনা একটি গালিচা...</p>
 
-            <p>03. Sylhet</p>
+        <p><span class="place-name">02. Cox's Bazar</span></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YPxfs_hYOnw" allowfullscreen></iframe>
+        <p class='bangla'>নীল জলরাশি আর সোনালি বালির মায়ায় মোড়ানো কক্সবাজার যেন বাংলাদেশের এক স্বপ্নঘেরা সমুদ্রকাব্য।</p>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eIKXxe2DqK0" allowfullscreen></iframe>
-            <p class='bangla'>সবুজ পাহাড় আর চা-বাগানের শহর সিলেট প্রকৃতির মায়াবী এক কোণ।
-</p>
+        <p><span class="place-name">03. Sylhet</span></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eIKXxe2DqK0" allowfullscreen></iframe>
+        <p class='bangla'>সবুজ পাহাড় আর চা-বাগানের শহর সিলেট প্রকৃতির মায়াবী এক কোণ।</p>
 
+        <p><span class="place-name">04. Nikli</span></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hQJdka1r6DE" allowfullscreen></iframe>
+        <p class='bangla'>নিকলী হাওর—জলের আয়নায় ভেসে থাকা আকাশ আর শান্ত প্রকৃতির নির্জন স্বর্গ।</p>`;
+   }
 
-            <p>04. Nikli</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hQJdka1r6DE" allowfullscreen></iframe>
-            <p class='bangla'>নিকলী হাওর—জলের আয়নায় ভেসে থাকা আকাশ আর শান্ত প্রকৃতির নির্জন স্বর্গ।
-</p>`;
-    } else if (type === "AET") {
-        contentDiv.innerHTML = `<h3>Agricultural Engineering Courses</h3>
-            <p><span class="link" onclick="showDriveFolder1()">Level 1 Semester 1</span></p>
-            <p><span class="link" onclick="showDriveFolder2()">Level 1 Semester 2</span></p>
-            <p><span class="link" onclick="showDriveFolder3()">Level 2 Semester 1</span></p>
-            <p><span class="link" onclick="showDriveFolder4()">Level 2 Semester 2</span></p>
-            <p><span class="link" onclick="showDriveFolder5()">Level 3 Semester 1</span></p>
-            <p><span class="link" onclick="showDriveFolder6()">Level 3 Semester 2</span></p>
-            
+    
+    else if (type === "AET") {
+        contentDiv.innerHTML = `<h3 id="AET_Course">Agricultural Engineering Courses</h3>
+            <div class="box-container">
+                <div class="course-box" onclick="showDriveFolder1()">Level 1 Semester 1</div>
+                <div class="course-box" onclick="showDriveFolder2()">Level 1 Semester 2</div>
+                <div class="course-box" onclick="showDriveFolder3()">Level 2 Semester 1</div>
+                <div class="course-box" onclick="showDriveFolder4()">Level 2 Semester 2</div>
+                <div class="course-box" onclick="showDriveFolder5()">Level 3 Semester 1</div>
+                <div class="course-box" onclick="showDriveFolder6()">Level 3 Semester 2</div>
+            </div>
             <div id="drive-folder" class="hidden"></div>`;
     }
+
 }
 
 
